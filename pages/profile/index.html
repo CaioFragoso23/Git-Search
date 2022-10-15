@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/globalStyles.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/styles/button.css">
+    <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/positioning.css">
+    <link rel="stylesheet" href="/styles/text.css">
     <title>Nome do usuário Github</title>
   </head>
-  <body>
-    <main></main>
+  <body class="container">
+    <header class="header flex jc-space-between align-items-center">
+      <div class="flex align-items-center">
+        <img id="imgDev" src="" alt="ImgDev">
+        <div>
+        <p id="nameDev">Desenvolvedor</p>
+        <p id="stackDev">Stack do Desenvolvedor</p>
+        </div>
+      </div>
+      <div>
+        <button id="emailUser" target="_blank" class="button-brand">E-mail</button>
+        <button id="switchUser" class="button-grey">Trocar de Usuário</button>
+      </div>
+    </header>
+    <main class="mainPage">
+      <ul class="cardsContainer flex flex-dir-row flex-wrapper">
+
+      </ul>
+    </main>
+    <script src="/getAPI.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

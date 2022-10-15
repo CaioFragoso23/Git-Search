@@ -1,0 +1,8 @@
+.text{
+    font-family: var(--font-family);
+    color: var(--color-grey-7);
+}
+.text-error{
+    font-family: var(--font-family);
+    color: firebrick;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="/pages/home/index.css" />
+    <link rel="stylesheet" href="/styles/button.css">
+    <link rel="stylesheet" href="/styles/text.css">
+    <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/formInput.css">
+    <title>Git Search</title>
+  </head>
+  <body class="flex flex-dir-row">
+    <main class="main homePage flex float-left jc-center">
+      <div class="flex flex-dir-column align-items-center jc-center">
+        <h1>Git Search</h1>
+        <p>Encontre e se conecte com profissionais de forma rápida e fácil</p>
+        <li>
+          <p>Achados Recentemente:</p>
+        </li>
+      </div>
+    </main>
+    <section class="section flex flex-dir-column align-items-center jc-center float-right">
+      <h2>Procurar por um usuário</h2>
+      <form class="form flex flex-dir-column" action="">
+        <p>Usuário GitHub</p>
+        <input type="text" class="insertUser" placeholder="Digite o nome de usuário..." value="" name="" id="nomeUsuario">
+        <button id="entrar" class="button-brand">Ver pefil do GitHub</button>
+      </form>
+    </section>
+
+    <script src="getAPI.js"></script>
+    <script src="/pages/home/index.js"></script>
+  </body>
+</html>

@@ -1,1 +1,14 @@
 /* Desenvolva sua estilização aqui...*/
+.homePage{
+    background-color: var(--color-brand-1);
+
+}
+.main{
+    width: 50%;
+    height: 770px;
+}
+
+.section{
+    width: 50%;
+    height: 770px;
+}

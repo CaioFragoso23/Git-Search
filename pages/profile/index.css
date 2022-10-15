@@ -1,1 +1,27 @@
 /* Desenvolva sua estilização aqui...*/
+.container {
+  width: 76rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header{
+    margin-top: 20px;
+}
+
+.cardsContainer{
+    gap: 24px;
+}
+.projectCard{
+    border: 1px solid var(--color-grey-4);
+    padding: 24px;
+    width: 45%;
+}
+.projectCard:hover{
+    border: 1px solid var(--color-grey-7);
+}
+.mainPage{
+    margin-top: 20px;
+}
