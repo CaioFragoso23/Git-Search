@@ -8,6 +8,7 @@
 .button-brand:disabled{
     background-color: rgba(214, 51, 108, 0.5);
 }
+.button-brand:-moz-loading{}
 
 .button-grey{
     border: none;

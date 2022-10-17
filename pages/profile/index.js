@@ -50,7 +50,8 @@ async function renderMain(arr){
     });
 
 }
-renderHeader(currentUser)
-renderMain(currentUser)
+renderHeader("CaioFragoso23")
+renderMain("CaioFragoso23")
 
 console.log(currentUser)
+console.log(otherUsers)
