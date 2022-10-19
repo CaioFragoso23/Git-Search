@@ -3,21 +3,23 @@ const myHeaders = {
     "Content-type": "application/json"
 }
 
-let currentUser = ""
-let otherUsers = []
+
 
 async function verifyUsers(username){
-        currentUser = ""
         let usergot = await fetch(`https://api.github.com/users/${username}`, {
             method: 'GET',
             headers: myHeaders
         })
         .then((response) => {
-            if(response.ok){
-                let responseJson = response.json()
-                currentUser = username
-                otherUsers.push(responseJson)
-                window.location.href = "/pages/profile/index.html"
+             if(response.ok){
+                response.json().then(responseJson => {
+                    let storageResponse = JSON.stringify(responseJson)
+                    localStorage.setItem("username", `${username}`)
+                    localStorage.setItem("Users", [`${storageResponse}`])
+                    
+                    window.location.href = "/pages/profile/index.html"
+                })
+
             }
             else{
                 response.json().then(response => {
@@ -27,6 +29,7 @@ async function verifyUsers(username){
                     entrar.addEventListener('click', () => {
                         errorMsg.remove()
                     })
+                    entrar.innerText = "Ver perfil do GitHub"
                     errorMsg.innerText = "Usuário Não Encontrado"
                     form.appendChild(errorMsg)
                     throw new Error(response.error)
@@ -37,8 +40,6 @@ async function verifyUsers(username){
         })
         .then(response => {
             console.log(response)
-            console.log(otherUsers)
-            console.log(currentUser)
         })
         .catch((error) => {
 

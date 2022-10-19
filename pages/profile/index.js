@@ -15,7 +15,10 @@ async function renderHeader(obj){
         // window.location.href = email do usuário
     })
 }
-
+let switchUser = document.getElementById('switchUser')
+switchUser.addEventListener('click', () => {
+    window.location.href = "/index.html"
+})
 async function renderMain(arr){
     const data = await fetch(`https://api.github.com/users/${arr}/repos`)
     const dataJson = await data.json()
@@ -50,8 +53,12 @@ async function renderMain(arr){
     });
 
 }
-renderHeader("CaioFragoso23")
-renderMain("CaioFragoso23")
 
-console.log(currentUser)
-console.log(otherUsers)
+
+function renderPage(){
+    let username = localStorage.getItem("username")
+    renderHeader(username)
+    renderMain(username)
+    
+}
+renderPage()

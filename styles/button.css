@@ -8,7 +8,17 @@
 .button-brand:disabled{
     background-color: rgba(214, 51, 108, 0.5);
 }
-.button-brand:-moz-loading{}
+
+.button-brand-active{
+    animation: loading 2s linear infinite;
+    height: 20%;
+    width: 20%;
+}
+@keyframes loading {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
 
 .button-grey{
     border: none;
