@@ -17,7 +17,7 @@ entrar.addEventListener('click', (event) => {
     event.preventDefault()
     let loading = document.createElement('div')
     let img = document.createElement('img')
-    console.log(verifyUsers(`${inputNomeUsuario.value}`))
+    verifyUsers(`${inputNomeUsuario.value}`)
     loading.classList.add("button-brand-active")
     img.src = './assets/img/spinner.svg'
     
@@ -33,19 +33,30 @@ function getLocalStorageUsers(){
 }
 getLocalStorageUsers()
 
-// function pastPages(){
-//     let visitedUsers = getLocalStorageUsers()
-//     visitedUsers.forEach((user) => {
-//         let pastUsersContainer = document.getElementById('pastUsers')
-//         let pastUserCard = document.createElement('li')
-//         let pastUserImg = document.createElement('img')
+function pastPages(){
+    let visitedUsers = getLocalStorageUsers()
+    let pastUsersContainer = document.getElementById('pastUsers')
+    let pastUserTitle = document.createElement('p')
+    pastUserTitle.innerText = "Achados Recentemente:"
+    pastUsersContainer.appendChild(pastUserTitle)
+    visitedUsers.forEach((user) => {
 
-//         pastUserImg.src = user.avatar_url
-//         pastUserCard.appendChild(pastUserImg)
-//         pastUsersContainer.appendChild(pastUserCard)
-//     })
+        let pastUserCard = document.createElement('li')
+        let pastUserImg = document.createElement('img')
 
 
-// }
+        pastUserImg.addEventListener('click', () => {
+            localStorage.setItem("username", user.login)
+            window.location.href = "./pages/profile/index.html"
+        })
 
+        pastUserImg.src = user.avatar_url
+        pastUserImg.classList = "pastUserImg"
+        pastUserCard.classList = "pastUserCard"
+        pastUserCard.appendChild(pastUserImg)
+        pastUsersContainer.appendChild(pastUserCard)
+    })
+
+}
+pastPages()
 
