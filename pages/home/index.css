@@ -27,4 +27,5 @@ width: 70px;
 .pastUserImg{
     display: flex;
     width: 100%;
+    cursor: pointer;
 }

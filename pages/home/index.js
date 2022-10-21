@@ -18,8 +18,8 @@ entrar.addEventListener('click', (event) => {
     let loading = document.createElement('div')
     let img = document.createElement('img')
     verifyUsers(`${inputNomeUsuario.value}`)
-    loading.classList.add("button-brand-active")
-    img.src = './assets/img/spinner.svg'
+    img.classList = "button-brand-active"
+    img.src = './assets/img/1544764567.png'
     
     entrar.innerHTML = ''
     loading.appendChild(img)
@@ -52,6 +52,7 @@ function pastPages(){
 
         pastUserImg.src = user.avatar_url
         pastUserImg.classList = "pastUserImg"
+        pastUserImg.title = "Acessar este perfil."
         pastUserCard.classList = "pastUserCard"
         pastUserCard.appendChild(pastUserImg)
         pastUsersContainer.appendChild(pastUserCard)
