@@ -6,11 +6,13 @@
 .main{
     width: 50%;
     height: 770px;
+    max-height: 100%;
 }
 
 .section{
     width: 50%;
     height: 770px;
+    max-height: 100%;
 }
 
 .pastUsers{
